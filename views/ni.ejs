@@ -1,11 +1,23 @@
 <style>
-#din{
+#head{
+  display:none;
+}
+#sidenav{
+  display:none;
+}
+#content{
   display:none;
 }
 </style>
 <script async>  
+$(function(){
+
 $('#im1, #im2, #im3, #im4, #im5, #im6, #im7, #im8, #im9').ready(function(){
-$('#din').fadeIn();
+  $('#head').fadeIn();
+  $('#sidenav').fadeIn();
+  $('#content').fadeIn();
+});
+
 $("#modal").draggable({handle:"#mdhd"});
 $("#mdhd").disableSelection();
 
@@ -76,7 +88,7 @@ $('.hb4').click(function(){
 });
 });
 </script>
-<div id='din'>
+
 <div id='head'>
 <div class='left'>  
 <h1><a href='/'>Kohei Shingai</a></h1>
@@ -124,7 +136,7 @@ $('.hb4').click(function(){
 <section class="home-box hb1" style="display: block;">
 <h3>Artwork</h3>
   <div id='frames'>
-  <img id='im2' src="./images/artwork.svg" style="margin-top: -7px;margin-left: 1px;">
+  <img id='im2' src="./images/artwork.png" style="margin-top: -7px;margin-left: 1px;">
     <div id="subs" style="margin-top: -22px;">Artwork</div>
   </div>
 <a href="#sketch" class="go hbg1"><img id='im3' src="./images/next.png"></a>  
@@ -132,7 +144,7 @@ $('.hb4').click(function(){
 <section class="home-box hb2" style="display: block;">
 <h3>Project</h3>
     <div id='frames'>
-  <img id='im4' src="./images/project.svg" style="margin-top: -15px;margin-left: 11px;">
+  <img id='im4' src="./images/project.png" style="margin-top: -15px;margin-left: 11px;">
       <div id="subs" style="margin-top: -12px;">Project</div>
   </div>
 <a href="#sketch" class="go hbg2"><img id='im5' src="./images/next.png"></a>
@@ -148,7 +160,7 @@ $('.hb4').click(function(){
 <section class="home-box hb4" style="display: block;">
 <h3>About</h3>
   <div id='frames'>
- <img id='im8' src="./images/about.svg" style="margin-top: -9px;margin-left: -2px;">
+ <img id='im8' src="./images/about.png" style="margin-top: -9px;margin-left: -2px;">
     <div id="subs" style="margin-top: -17px;">About Me</div>
   </div>
 <a href="#sketch" class="go hbg4"><img id='im9' src="./images/next.png"></a>
@@ -167,5 +179,4 @@ $('.hb4').click(function(){
 </div>
 </div>
 </div>  
-</div>
 </div>
