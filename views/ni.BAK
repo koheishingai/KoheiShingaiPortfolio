@@ -1,0 +1,166 @@
+<script async>  
+$(function(){
+$("#modal").draggable({handle:"#mdhd"});
+$("#mdhd").disableSelection();
+
+var afht = window.innerHeight;
+var afwi = window.innerWidth;
+$('#msk').css('height',afht).css('width',afwi);
+
+  
+$(window).resize(function() {
+var afht = window.innerHeight;
+var afwi = window.innerWidth;
+$('#msk').css('height',afht).css('width',afwi);
+});
+  
+$('#cbox').click(function(){
+$('#msk').css('display','block');
+$('#modal').css('top', afht/2-145).css('left', afwi/2-210);
+});
+   
+var mskflg = 0;  
+$('.in').click(function(){
+mskflg = 1; 
+});  
+
+  
+$('#msk').click(function(){
+if(mskflg != 1){
+$('#msk').css('display','none');
+}
+mskflg = 0;
+});  
+  
+$('.hb1').mouseover(function(){
+  $('.hbg1').css('box-shadow', 'inset 1px 1px 50px rgba(117, 117, 117, 0.31)');
+  $('.hb1 #frames').addClass('frshb');
+});
+$('.hb1').mouseleave(function(){
+  $('.hbg1').css('box-shadow', 'none');
+  $('.hb1 #frames').removeClass('frshb');
+});
+$('.hb2').mouseover(function(){
+  $('.hbg2').css('box-shadow', 'inset 1px 1px 50px rgba(117, 117, 117, 0.31)');
+  $('.hb2 #frames').addClass('frshb');
+});
+$('.hb2').mouseleave(function(){
+  $('.hbg2').css('box-shadow', 'none');
+  $('.hb2 #frames').removeClass('frshb');
+});  
+$('.hb3').mouseover(function(){
+  $('.hbg3').css('box-shadow', 'inset 1px 1px 50px rgba(117, 117, 117, 0.31)');
+  $('.hb3 #frames').addClass('frshb');
+});
+$('.hb3').mouseleave(function(){
+  $('.hbg3').css('box-shadow', 'none');  
+  $('.hb3 #frames').removeClass('frshb');  
+});
+$('.hb4').mouseover(function(){
+  $('.hbg4').css('box-shadow', 'inset 1px 1px 50px rgba(117, 117, 117, 0.31)');
+  $('.hb4 #frames').addClass('frshb');
+});
+$('.hb4').mouseleave(function(){
+  $('.hbg4').css('box-shadow', 'none');
+  $('.hb4 #frames').removeClass('frshb');
+});
+
+$('.hb4').click(function(){
+  location.href = '/about';
+});
+});
+</script>
+</head>
+<body>
+<div id='head'>
+<div class='left'>  
+<h1><a href='/'>Kohei Shingai</a></h1>
+<h2><a href='/'>Web Developer</a></h2>
+</div>
+<div class='right'>
+<div id='pwrap'>
+<img src="./images/face.jpg" class="primg" style="cursor: auto;">
+<h1>
+  <a href="/">Kohei Shingai</a>
+</h1>
+<ul id="pdetail">
+<li>
+<a href="https://www.google.com/maps/preview?authuser=0#!q=tokyo&data=!4m10!1m9!4m8!1m3!1d25572196!2d-95.677068!3d37.0625!3m2!1i1437!2i753!4f13.1" class="igeo" target="_blank">Tokyo</a>
+</li>
+  <li><a href="http://www.koheishingai.com" class="iurl">www.koheishingai.com</a></li>
+<li><a href="https://twitter.com/koheishingai" class="itweet" target='blank'>@koheishingai</a></li>
+
+<a href="#" id="cbox">
+<span>Contact Me</span>
+  </a>
+</ul>
+
+</div>
+</div>  
+</div>
+<div id='sidenav'>
+<ul>  
+<li>
+  <a href='#artwork'>Artwork</a>
+</li>  
+<li>
+  <a href='#project'>Project</a>  
+</li>  
+<li>
+  <a href='#Service'>Service</a>  
+</li>
+<li>
+  <a href='/about'>About</a>  
+</li>   
+</ul>  
+</div>
+<div id='content'>
+<h1>Hello!</h1>  
+<section class="home-box hb1" style="display: block;">
+<h3>Artwork</h3>
+  <div id='frames'>
+  <img src="./images/artwork.svg" style="margin-top: -7px;margin-left: 1px;">
+    <div id="subs" style="margin-top: -22px;">Artwork</div>
+  </div>
+<a href="#sketch" class="go hbg1"><img src="./images/next.png"></a>  
+</section>
+<section class="home-box hb2" style="display: block;">
+<h3>Project</h3>
+    <div id='frames'>
+  <img src="./images/project.svg" style="margin-top: -15px;margin-left: 11px;">
+      <div id="subs" style="margin-top: -12px;">Project</div>
+  </div>
+<a href="#sketch" class="go hbg2"><img src="./images/next.png"></a>
+</section>
+<section class="home-box hb3" style="display: block;">
+<h3>Service</h3>
+    <div id='frames'>
+  <img src="./images/service.png" style="margin-top: -7px;margin-left: 8px;">
+      <div id="subs" style="margin-top: -18px;">Service</div>
+  </div>
+<a href="#sketch" class="go hbg3"><img src="./images/next.png"></a>
+</section>
+<section class="home-box hb4" style="display: block;">
+<h3>About</h3>
+  <div id='frames'>
+ <img src="./images/about.svg" style="margin-top: -9px;margin-left: -2px;">
+    <div id="subs" style="margin-top: -17px;">About Me</div>
+  </div>
+<a href="#sketch" class="go hbg4"><img src="./images/next.png"></a>
+</section>
+</div>
+  
+<div id='msk'>
+<div id='modal' class='in'>
+<div id='mdcont' class='in'>
+<div id='mdhd' class='in'>
+<h3 class='in'>Contact Me</h3>
+</div>
+<div id='cmfm' class='in'></div>
+<div id='wcmbt' class='in'>
+<div id='cmbt' class='in'>Send</div>
+</div>
+</div>
+</div>  
+</div>
+

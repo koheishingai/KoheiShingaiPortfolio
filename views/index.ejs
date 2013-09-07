@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>www.koheishingai.com</title>
+<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
+<link href='./styles/style.css' rel='stylesheet'>
+<script src='http://code.jquery.com/jquery-1.10.2.min.js' async></script>
+<script src='http://code.jquery.com/ui/1.10.3/jquery-ui.js' async></script>
+<script src='http://sukobuto.com/files/jquery.skOuterClick.js' async></script>
+<script async>  
+window.onload = function(){
+
+//Device Branch
+var userAgent = window.navigator.userAgent.toLowerCase();
+var appVersion = window.navigator.appVersion.toLowerCase();
+var wb;
+var sb;
+
+if (userAgent.indexOf('Android') != -1 && userAgent.indexOf('Mobile') == -1) {
+  sb = 'androidtab';
+} else if(navigator.userAgent.indexOf('iPad') != -1){
+  sb = 'ipad'
+}else if(navigator.userAgent.indexOf('iPhone') != -1 && navigator.userAgent.indexOf('iPad') == -1){
+  sb = 'iphone'
+}else if(navigator.userAgent.indexOf('Android') != -1 && navigator.userAgent.indexOf('Mobile') == -1){
+  sb = 'android'
+}
+
+if (userAgent.indexOf('opera') != -1) {
+  wb = 'opera';
+}  else if (userAgent.indexOf("msie") != -1) {
+  if (appVersion.indexOf("msie 6.") != -1) {
+    wb = 'ie6';
+  } else if (appVersion.indexOf("msie 7.") != -1) {
+    wb = 'ie7';
+  } else if (appVersion.indexOf("msie 8.") != -1) {
+    wb = 'ie8';
+  } else if (appVersion.indexOf("msie 9.") != -1) {
+    wb = 'ie9';
+  } else {
+    wb = 'ie';
+  }
+} else if (userAgent.indexOf('chrome') != -1) {
+  wb = 'chrome';
+} else if (userAgent.indexOf('safari') != -1) {
+  wb = 'safari';
+} else if (userAgent.indexOf('gecko') != -1) {
+  wb = 'gecko';
+} else {
+  return false;
+}
+
+if(sb != null||wb == 'safari'||wb == 'ie6'||wb == 'ie7'||wb == 'ie8'||wb == 'ie9'||wb == 'ie'){
+  $('#body').hide();
+    if(sb == 'android'||sb == 'iphone'){
+      //mobile
+      $('body').load('/phone', function(){
+      $('body').fadeIn();
+      });
+    }else if(sb == 'androidtab'||sb == 'ipad'){
+      //tablet
+      $('body').load('/tablet', function(){
+      $('body').fadeIn();
+      });
+    }else if(wb == 'safari'){
+      //Safari(PC)
+      $('body').load('/safari', function(){
+      $('body').fadeIn();
+      });
+    }else if(wb == 'ie6'||wb == 'ie7'||wb == 'ie8'||wb == 'ie9'||wb == 'ie'){
+      //IE(PC)
+      $('body').load('/ie', function(){
+      $('body').fadeIn();
+      });
+    }
+}else{
+  //Chrome and FireFox(PC)
+  $('body').load('/ni', function(){
+  $('body').fadeIn();
+  });
+}
+};
+</script>
+</head>
+<body>
+</body>
+</html>
