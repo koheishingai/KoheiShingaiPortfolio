@@ -13,6 +13,7 @@
 $(function(){
 
 $('#im1, #im2, #im3, #im4, #im5, #im6, #im7, #im8, #im9').ready(function(){
+  $('#h1').fadeOut();
   $('#head').fadeIn();
   $('#sidenav').fadeIn();
   $('#content').fadeIn();
@@ -88,7 +89,7 @@ $('.hb4').click(function(){
 });
 });
 </script>
-
+<h1 id='loading' style='position:absolute; display:none;'>Loading...</h1>
 <div id='head'>
 <div class='left'>  
 <h1><a href='/'>Kohei Shingai</a></h1>
