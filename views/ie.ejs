@@ -13,9 +13,12 @@ display:none;
 </style>
 <script>
 $(function(){
-  $('#wrap').ready(function(){
-    $('#wrap').fadeIn();
+  $('#wrapim').ready(function(){
+    $('#wrap').ready(function(){
+      $('#wrap').fadeIn();
+    });
   });
 });
 </script>
+<img id='wrapim' src='./images/safari.jpg' style='display:none;'>
 <div id='wrap'></div>
