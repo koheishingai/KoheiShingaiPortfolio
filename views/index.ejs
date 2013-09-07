@@ -6,10 +6,10 @@
 <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
 <link href='./styles/style.css' rel='stylesheet'>
-<script src='http://code.jquery.com/jquery-1.10.2.min.js' async></script>
-<script src='http://code.jquery.com/ui/1.10.3/jquery-ui.js' async></script>
-<script src='http://sukobuto.com/files/jquery.skOuterClick.js' async></script>
-<script async>  
+<script src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+<script src='http://code.jquery.com/ui/1.10.3/jquery-ui.js'></script>
+<script src='http://sukobuto.com/files/jquery.skOuterClick.js'></script>
+<script>  
 window.onload = function(){
 
 //Device Branch
@@ -57,11 +57,13 @@ if(sb != null||wb == 'safari'||wb == 'ie6'||wb == 'ie7'||wb == 'ie8'||wb == 'ie9
     if(sb == 'android'||sb == 'iphone'){
       //mobile
       $('body').load('/phone', function(){
+      $('body').attr('ontouchmove', 'event.preventDefault()');
       $('body').fadeIn();
       });
     }else if(sb == 'androidtab'||sb == 'ipad'){
       //tablet
       $('body').load('/tablet', function(){
+      $('body').attr('ontouchmove', 'event.preventDefault()');
       $('body').fadeIn();
       });
     }else if(wb == 'safari'){
