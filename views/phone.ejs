@@ -1,24 +1,206 @@
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="viewport" content="initial-scale=1.0">
+<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+<title>www.koheishingai.com</title>
 <style>
-#wrap {
-position: fixed;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-background: url('./images/safari.jpg');
-background-size: cover;
-background-position: 38% 50%;
-display:none;
+body{
+height:100%;
+width:100%;
+min-height:500px;
+margin:0px;
+overflow-y:auto;
+overflow-x:hidden;
+position:absolute;
+background-color: #ffffff;
+color: #515151;
+-webkit-font-smoothing: subpixel-antialiased!important;
+font-size:small;
+-webkit-text-size-adjust: none;
+display:block !important;
 }
+
+nav ul {
+    list-style:none;
+}
+
+/*header*/
+#header {
+background: rgba(255, 255, 255, 0.36);
+border-bottom: 1px solid #ccc;
+text-shadow: 0 1px 0 #fff;
+height: 49px;
+position: relative;
+width: 100%;
+}
+.button {
+    width: 49px;
+    height: 49px;
+    position: absolute;
+    display: block;
+    background-repeat: no-repeat;
+    background-image: url('./images/menu.png');
+    background-position: center;
+}
+.menu-button-left {
+    left: 0px;
+    border-right: 1px solid #ddd;
+}
+.menu-button-right {
+    right: 0px;
+    border-left: 1px solid #ddd;
+}
+
+/*slidemenu*/
+.slidemenu {
+    background-color: #333;
+}
+.slidemenu li {
+    list-style: none;
+    border-top: 1px solid #4D4D4D;
+    border-bottom: 1px solid #000;
+    font-size:14px;
+    line-height: 1.8;
+}
+.slidemenu li a {
+    padding:10px 0 10px 20px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+}
+.slidemenu li:first-child {
+    border-top: none;
+}
+.slidemenu li:last-child {
+    border-bottom: none;
+}
+.slidemenu .slidemenu-header {
+    height: 49px;
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 3px rgba(34,25,25,.4);
+    -moz-box-shadow: 0 1px 3px rgba(34,25,25,.4);
+    -webkit-box-shadow: 0 1px 3px rgba(34,25,25,.4);
+    background-color: #333;
+}
+.slidemenu .slidemenu-header div {
+    padding: 17px 0px 0px 19px;
+    text-decoration: none;
+    color: #fff;
+}
+
+/*main*/
+#main {
+    background-image: url(./images/phbg.png);
+}
+#contents {
+    padding: 20px;
+}
+#contents h1 {
+    font-size: 18px;
+}
+#contents p {
+    margin-top: 15px;
+}
+
+/*plugin*/
+#main {
+z-index: 1;
+height: 100%;
+}
+.slidemenu {
+  top: 0;
+  width: 240px;
+  position: fixed;
+  visibility: hidden;
+  z-index: -1;
+}
+.slidemenu .slidemenu-header {
+  position: relative;
+}
+.slidemenu .slidemenu-body {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.slidemenu .slidemenu-body .slidemenu-content {
+  position: relative;
+}
+.slidemenu-left {
+    left: 0;
+}
+.slidemenu-right {
+    right: 0;
+}
+
+#logo {
+text-align: center;
+font-size: 24px;
+font-family:'Oxygen';
+color: #C75437;
+line-height: 46px;
+}
+
+
+
 </style>
+<script src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
 <script>
-$(function(){
-  $('#wrapim').ready(function(){
-    $('#wrap').ready(function(){
-      $('#wrap').fadeIn();
-    });
-  });
-});
 </script>
-<img id='wrapim' src='./images/safari.jpg' style='display:none;'>
-<div id='wrap'></div>
+
+
+
+  <div class="slidemenu slidemenu-left" style="height: 985px; transition: visibility 0ms linear 200ms; -webkit-transition: visibility 0ms linear 200ms;">
+    <div class="slidemenu-header">
+      <div>
+        Header
+      </div>
+    </div>
+    <div class="slidemenu-body">
+      <ul class="slidemenu-content" style="transition: -webkit-transform 0ms ease-in-out 0ms; -webkit-transition: -webkit-transform 0ms ease-in-out 0ms; -webkit-transform: translate3d(0px, 0px, 0px);">
+        <li><a class="menu-item" href="">Menu 1</a></li>
+        <li><a class="menu-item" href="">Menu 2</a></li>
+        <li><a class="menu-item" href="">Menu 3</a></li>
+        <li><a class="menu-item" href="">Menu 4</a></li>
+        <li><a class="menu-item" href="">Menu 5</a></li>
+        <li><a class="menu-item" href="">Menu 6</a></li>
+        <li><a class="menu-item" href="">Menu 7</a></li>
+        <li><a class="menu-item" href="">Menu 8</a></li>
+        <li><a class="menu-item" href="">Menu 9</a></li>
+        <li><a class="menu-item" href="">Menu 10</a></li>
+        <li><a class="menu-item" href="">Menu 11</a></li>
+        <li><a class="menu-item" href="">Menu 12</a></li>
+        <li><a class="menu-item" href="">Menu 13</a></li>
+        <li><a class="menu-item" href="">Menu 14</a></li>
+        <li><a class="menu-item" href="">Menu 15</a></li>
+        <li><a class="menu-item" href="">Menu 16</a></li>
+        <li><a class="menu-item" href="">Menu 17</a></li>
+        <li><a class="menu-item" href="">Menu 18</a></li>
+        <li><a class="menu-item" href="">Menu 19</a></li>
+        <li><a class="menu-item" href="">Menu 20</a></li>
+        <li><a class="menu-item" href="">Menu 21</a></li>
+        <li><a class="menu-item" href="">Menu 22</a></li>
+        <li><a class="menu-item" href="">Menu 23</a></li>
+        <li><a class="menu-item" href="">Menu 24</a></li>
+        <li><a class="menu-item" href="">Menu 25</a></li>
+        <li><a class="menu-item" href="">Menu 26</a></li>
+        <li><a class="menu-item" href="">Menu 27</a></li>
+        <li><a class="menu-item" href="">Menu 28</a></li>
+        <li><a class="menu-item" href="">Menu 29</a></li>
+        <li><a class="menu-item" href="">Menu 30</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="main" style="min-height: 985px; transition: -webkit-transform 200ms ease-in-out 0ms; -webkit-transition: -webkit-transform 200ms ease-in-out 0ms; -webkit-transform: translate3d(0px, 0px, 0px);">
+    <header id="header">
+      <span class="button menu-button-left"></span>
+      <div id='logo'>Kohei Shingai</div>
+    </header>
+
+  </div>
+
+
+<script src='./scripts/slide.js'></script>
+<script>
+    var menu = SpSlidemenu('#main', '.slidemenu-left', '.menu-button-left', {direction: 'left'});
+</script>
