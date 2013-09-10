@@ -1,5 +1,4 @@
 @charset 'UTF-8';
-
 body {
 height: 100%;
 min-height: 500px;
@@ -12,8 +11,8 @@ font-family: 'Oxygen', sans-serif;
 color: #464646;
 background: linear-gradient(135deg, #FFFBF4 25%, transparent 25%) -50px 0, linear-gradient(225deg, #FFFBF4 25%, transparent 25%) -50px 0, linear-gradient(315deg, #FFFBF4 25%, transparent 25%), linear-gradient(45deg, #FFFBF4 25%, transparent 25%);
 background-size: 100px 100px;
-background-color: #FFF7D7;
-display:none;
+background-color: #FFFBCD;
+display: none;
 }
 ol,ul{
 list-style:none;
@@ -319,7 +318,7 @@ height: 235px;
 overflow: hidden;
 position: relative;
 margin: 18px 55px;
-background: #FAED59;
+background: #FAF459;
 border-radius: 14px;
 box-shadow: 0 1px 4px rgba(0,0,0,.2), inset 0 1px 2px #FAF192, inset 0 -1px 1px #C5C5C5;
 text-align: center;
