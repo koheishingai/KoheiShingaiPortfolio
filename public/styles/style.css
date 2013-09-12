@@ -70,10 +70,10 @@ font-size: 15px;
 font-weight: bold; 
 } 
 #sidenav ul li a:hover {
-background: #cb4e4e;
+background: rgba(0,0,0,.05);
 }
 #sidenav ul li .on { 
-background: rgba(255, 235, 3, 0.46) !important; 
+background: rgba(255, 3, 3, 0.46) !important;
 } 
   
 #head .left h1{ 
