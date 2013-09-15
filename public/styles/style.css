@@ -10,7 +10,7 @@ font-size: small;
 font-family: 'Oxygen', Helvetica, Arial, sans-serif; 
 color: #89867e; 
 background-color: #fcd04b; 
-display: none; 
+display: block; 
 } 
 ol,ul{ 
 list-style:none; 
