@@ -3,7 +3,7 @@
 $(function(){
   
   //socket section
-  var socket = io.connect(':3001');
+  var socket = io.connect(':1337');
   socket.on('examples', function (data) {
      alert(data);
   });
