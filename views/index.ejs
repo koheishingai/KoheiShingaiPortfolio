@@ -56,7 +56,7 @@ if(sb != null||wb == 'safari'||wb == 'ie6'||wb == 'ie7'||wb == 'ie8'||wb == 'ie9
     if(sb == 'android'||sb == 'iphone'){
       //mobile
       $('body').load('/phone', function(){
-      $('body').attr('ontouchmove', 'event.preventDefault()');
+      //$('body').attr('ontouchmove', 'event.preventDefault()');
       $('body').show();
       });
     }else if(sb == 'androidtab'||sb == 'ipad'){
