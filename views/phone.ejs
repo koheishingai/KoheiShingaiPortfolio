@@ -1,10 +1,18 @@
-
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="viewport" content="initial-scale=1.0">
 <title>www.koheishingai.com</title>
 <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 <link rel='stylesheet' href='./styles/stylephone.css'>
 <script src='http://code.jquery.com/jquery-1.10.2.min.js' async></script>
-<script async>
+<script>
+window.addEventListener("load", function() {
+    setTimeout(function() {
+        scrollBy(0, 1);
+    }, 100);
+}, false);
+</script>
+<script>
 $(function(){
   //init elements hide
   $('body').hide();
