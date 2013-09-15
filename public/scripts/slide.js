@@ -734,7 +734,7 @@ SpSlidemenu.prototype.getTranslateX = function(x) {
       if (userAgent.indexOf('crios') != -1) {
         x = x+142;
       }else{
-        x = x+5;
+        x = x+4.5;
       }
     }
     return _this.use3d ? 'translate3d(' + x + 'px, 0px, 0px)' : 'translate(' + x + 'px, 0px)';
