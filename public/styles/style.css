@@ -60,7 +60,7 @@ text-align:left;
 #sidenav ul li{ 
 padding:7px 0;     
 } 
-#sidenav ul li a { 
+#sidenav ul li div { 
 letter-spacing: 1px; 
 display: block; 
 padding: 6px 4px 6px 15px; 
@@ -68,8 +68,9 @@ text-decoration: none;
 color:#fff; 
 font-size: 15px; 
 font-weight: bold; 
+cursor:pointer;
 } 
-#sidenav ul li a:hover {
+#sidenav ul li div:hover {
 background: rgba(0,0,0,.05);
 }
 #sidenav ul li .on { 

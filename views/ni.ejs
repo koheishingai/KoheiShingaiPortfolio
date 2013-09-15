@@ -95,7 +95,7 @@ $(function(){
     $('.hb4 #frames').removeClass('frshb');
   });
 
-  //about click
+  //about click content
   $('.hb4').click(function(){
     $('#si4').addClass('on');
       $('#content').fadeOut(function(){
@@ -105,8 +105,21 @@ $(function(){
         });
       });
     });
-  });
   
+  //about click sidenav
+  $('#si4').click(function(){
+    $(this).addClass('on');
+      $('#content').fadeOut(function(){
+        $(this).append("<div id='loading'><span class='span'>Loading</span><span class='span l-1'></span><span class='span l-2'></span><span class='span l-3'></span><span class='span l-4'></span><span class='span l-5'></span><span class='span l-6'></span></div>").load('/about', function(){
+          $('#loading').hide();
+          $(this).fadeIn();
+        });
+      });
+    });    
+  
+});
+  
+
 </script>
 
 <div id='loading'>
@@ -149,16 +162,16 @@ $(function(){
 <div id='sidenav'>
 <ul>  
 <li>
-  <a href='#artwork' id='si1'>Artwork</a>
+  <div id='si1'>Artwork</div>
 </li>  
 <li>
-  <a href='#project' id='si2'>Project</a>  
+  <div id='si2'>Project</div>  
 </li>  
 <li>
-  <a href='#Service' id='si3'>Service</a>  
+  <div id='si3'>Service</div>  
 </li>
 <li>
-  <a href='/about' id='si4'>About</a>  
+  <div id='si4'>About</div>  
 </li>   
 </ul>  
 </div>
