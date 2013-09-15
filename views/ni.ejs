@@ -96,23 +96,31 @@ $(function(){
   });
 
   //about click content
+  var scroll = 0;
   $('.hb4').click(function(){
+  scroll = $('#content').scrollTop();
+  scroll = 0 - scroll;
     $('#si4').addClass('on');
       $('#content').fadeOut(function(){
         $(this).append("<div id='loading'><span class='span'>Loading</span><span class='span l-1'></span><span class='span l-2'></span><span class='span l-3'></span><span class='span l-4'></span><span class='span l-5'></span><span class='span l-6'></span></div>").load('/about', function(){
           $('#loading').hide();
           $(this).fadeIn();
+          $('#content').scrollTop(scroll);
         });
       });
     });
+    
   
   //about click sidenav
   $('#si4').click(function(){
+  scroll = $('#content').scrollTop();
+  scroll = 0 - scroll;
     $(this).addClass('on');
       $('#content').fadeOut(function(){
         $(this).append("<div id='loading'><span class='span'>Loading</span><span class='span l-1'></span><span class='span l-2'></span><span class='span l-3'></span><span class='span l-4'></span><span class='span l-5'></span><span class='span l-6'></span></div>").load('/about', function(){
           $('#loading').hide();
           $(this).fadeIn();
+          $('#content').scrollTop(scroll);
         });
       });
     });    
