@@ -26,30 +26,33 @@ nav ul {
 
 /*header*/
 #header {
-background: rgba(255, 255, 255, 1);
-border-bottom: 1px solid #ccc;
-text-shadow: 0 1px 0 #fff;
-height: 49px;
+background: #fff;
+height: 44px;
 position: relative;
 width: 100%;
 text-align: right;
 }
+
 .button {
-    width: 49px;
-    height: 49px;
-    position: absolute;
-    display: block;
-    background-repeat: no-repeat;
-    background-image: url('./images/menu.png');
-    background-position: center;
+width: 44px;
+height: 44px;
+position: absolute;
+display: block;
+background-repeat: no-repeat;
+background-image: url('./images/menu.png');
+background-position: center;
+border-right: 3px solid #fcd04b;
 }
+
+
+
 .menu-button-left {
-    left: 0px;
-    border-right: 1px solid #ccc;
+left: 0px;
+
 }
 .menu-button-right {
     right: 0px;
-    border-left: 1px solid #ccc;
+
 }
 
 /*slidemenu*/
@@ -91,7 +94,7 @@ text-align: right;
 
 /*main*/
 #main {
-    background-image: url(./images/phbg.png);
+  background: #fcd04b;
 }
 #contents {
     padding: 20px;
@@ -135,9 +138,9 @@ height: 100%;
 
 #logo {
 font-size: 17px;
-color: #C75437;
-line-height: 47px;
-margin-right: 5px;
+color: #da9622;
+line-height: 42.5px;
+margin-right: 8px;
 }
 
 
@@ -145,6 +148,11 @@ margin-right: 5px;
 </style>
 <script src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
 <script>
+$(function(){
+  var afwi = window.innerWidth;
+  $('#header').css('width',afwi - 6).css('border','3px solid #fcd04b');
+
+});
 </script>
 
 
