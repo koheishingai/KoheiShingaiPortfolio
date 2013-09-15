@@ -35,4 +35,3 @@ socket.on('on', function (data) {
     console.log(data);
 });
 });
-
