@@ -1,4 +1,4 @@
-var io = require('socket.io').listen(8080);
+var io = require('socket.io').listen(1337);
 
 exports.index = function(req, res){
   res.render('index', { title: 'Express' });
