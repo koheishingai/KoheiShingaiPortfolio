@@ -11,9 +11,11 @@
 </style>
 <script async>  
 $(function(){
+  $('#loading').show();
 
   //init loading
   $('#im1, #im2, #im3, #im4, #im5, #im6, #im7, #im8, #im9').ready(function(){
+    $('#loading').hide();  
     $('#head').fadeIn();
     $('#sidenav').fadeIn();
     $('#content').fadeIn();
@@ -106,6 +108,15 @@ $(function(){
     });
   });
 </script>
+<div id='loading'>
+<span class='span'>Loading</span>
+<span class="span l-1"></span>
+<span class="span l-2"></span>
+<span class="span l-3"></span>
+<span class="span l-4"></span>
+<span class="span l-5"></span>
+<span class="span l-6"></span>
+</div>
 <div id='head'>
 <div class='left'>  
 <h1><a href='/'>Kohei Shingai</a></h1>
