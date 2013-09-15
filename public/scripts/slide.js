@@ -728,7 +728,9 @@ SpSlidemenu.prototype.getScrollCurrentY = function() {
 
 SpSlidemenu.prototype.getTranslateX = function(x) {
     var _this = this;
-
+    if(x != 0){
+      x = x+142;
+    }
     return _this.use3d ? 'translate3d(' + x + 'px, 0px, 0px)' : 'translate(' + x + 'px, 0px)';
 };
 
