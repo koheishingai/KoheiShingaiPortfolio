@@ -79,14 +79,16 @@ if(sb != null||wb == 'safari'||wb == 'ie6'||wb == 'ie7'||wb == 'ie8'||wb == 'ie9
     }
 }else{
   //Chrome and FireFox(PC)
+  $('body').show();
   $('body').load('/ni', function(){
-    $('body').show();
+    
+    $('#loading').hide();
   });
 }
 };
 </script>
 </head>
 <body>
-
+<div id='loading'>Loading...</div>
 </body>
 </html>

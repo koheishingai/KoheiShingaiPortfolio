@@ -473,3 +473,7 @@ background-image: -o-linear-gradient(#fff,#ddd);
 background-image: linear-gradient(#fff,#ddd); 
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#dddddd');  
 } 
+
+#loading{
+display:block;
+}
