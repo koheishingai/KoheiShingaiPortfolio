@@ -102,21 +102,17 @@ $(function(){
   //about click
   $('.hb4').click(function(){
     $('#si4').addClass('on');
-      $('#content').text('').load('/about', function(){
-        $(this).fadeIn();
+      $('#content').fadeOut(function(){
+        $(this).append("<div id='loading'><span class='span'>Loading</span><span class='span l-1'></span><span class='span l-2'></span><span class='span l-3'></span><span class='span l-4'></span><span class='span l-5'></span><span class='span l-6'></span></div>").load('/about', function(){
+          $('#loading').hide();
+          $(this).fadeIn();
+        });
       });
     });
   });
+  
 </script>
-<div id='loading'>
-<span class='span'>Loading</span>
-<span class="span l-1"></span>
-<span class="span l-2"></span>
-<span class="span l-3"></span>
-<span class="span l-4"></span>
-<span class="span l-5"></span>
-<span class="span l-6"></span>
-</div>
+<div id='loading'><span class='span'>Loading</span><span class='span l-1'></span><span class='span l-2'></span><span class='span l-3'></span><span class='span l-4'></span><span class='span l-5'></span><span class='span l-6'></span></div>
 <div id='head'>
 <div class='left'>  
 <h1><a href='/'>Kohei Shingai</a></h1>
