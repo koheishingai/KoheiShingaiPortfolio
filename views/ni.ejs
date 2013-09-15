@@ -1,6 +1,14 @@
 <link href='./styles/style.css' rel='stylesheet'>
 <script async>  
 $(function(){
+  
+  //socket section
+  var socket = io.connect(':3001');
+  socket.on('examples', function (data) {
+     alert(data);
+  });
+
+
   //init elements hide
   $('#head').hide();
   $('#sidenav').hide();
