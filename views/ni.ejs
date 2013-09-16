@@ -5,7 +5,7 @@ $(function(){
   //socket section
   var socket = io.connect(':8080');
   socket.on('examples', function (data) {
-     alert(data);
+     //alert(data);
   });
 
 
@@ -103,12 +103,122 @@ $(function(){
     $('.hb4 #frames').removeClass('frshb');
   });
 
-  //about click content
+      //about click content
   var scroll = 0;
+  $('.hb1').click(function(){
+  scroll = $('#content').scrollTop();
+  scroll = 0 - scroll;
+    $('#si1').addClass('on');
+    $('#si2').removeClass('on');
+    $('#si3').removeClass('on');
+    $('#si4').removeClass('on');
+      $('#content').fadeOut(function(){
+        $(this).append("<div id='loading'><span class='span'>Loading</span><span class='span l-1'></span><span class='span l-2'></span><span class='span l-3'></span><span class='span l-4'></span><span class='span l-5'></span><span class='span l-6'></span></div>").load('/artwork', function(){
+          $('#loading').hide();
+          $(this).fadeIn();
+          $('#content').scrollTop(scroll);
+        });
+      });
+    });
+    
+  
+  //about click sidenav
+  $('#si1').click(function(){
+  scroll = $('#content').scrollTop();
+  scroll = 0 - scroll;
+    $(this).addClass('on');
+    $('#si2').removeClass('on');
+    $('#si3').removeClass('on');
+    $('#si4').removeClass('on');
+      $('#content').fadeOut(function(){
+        $(this).append("<div id='loading'><span class='span'>Loading</span><span class='span l-1'></span><span class='span l-2'></span><span class='span l-3'></span><span class='span l-4'></span><span class='span l-5'></span><span class='span l-6'></span></div>").load('/artwork', function(){
+          $('#loading').hide();
+          $(this).fadeIn();
+          $('#content').scrollTop(scroll);
+        });
+      });
+    });    
+    
+  //about click content
+  $('.hb2').click(function(){
+  scroll = $('#content').scrollTop();
+  scroll = 0 - scroll;
+    $('#si2').addClass('on');
+    $('#si1').removeClass('on');
+    $('#si3').removeClass('on');
+    $('#si4').removeClass('on');
+      $('#content').fadeOut(function(){
+        $(this).append("<div id='loading'><span class='span'>Loading</span><span class='span l-1'></span><span class='span l-2'></span><span class='span l-3'></span><span class='span l-4'></span><span class='span l-5'></span><span class='span l-6'></span></div>").load('/project', function(){
+          $('#loading').hide();
+          $(this).fadeIn();
+          $('#content').scrollTop(scroll);
+        });
+      });
+    });
+    
+  
+  //about click sidenav
+  $('#si2').click(function(){
+  scroll = $('#content').scrollTop();
+  scroll = 0 - scroll;
+    $(this).addClass('on');
+    $('#si1').removeClass('on');
+    $('#si3').removeClass('on');
+    $('#si4').removeClass('on');
+      $('#content').fadeOut(function(){
+        $(this).append("<div id='loading'><span class='span'>Loading</span><span class='span l-1'></span><span class='span l-2'></span><span class='span l-3'></span><span class='span l-4'></span><span class='span l-5'></span><span class='span l-6'></span></div>").load('/project', function(){
+          $('#loading').hide();
+          $(this).fadeIn();
+          $('#content').scrollTop(scroll);
+        });
+      });
+    }); 
+    
+        
+  //about click content
+  $('.hb3').click(function(){
+  scroll = $('#content').scrollTop();
+  scroll = 0 - scroll;
+    $('#si3').addClass('on');
+    $('#si1').removeClass('on');
+    $('#si2').removeClass('on');
+    $('#si4').removeClass('on');
+      $('#content').fadeOut(function(){
+        $(this).append("<div id='loading'><span class='span'>Loading</span><span class='span l-1'></span><span class='span l-2'></span><span class='span l-3'></span><span class='span l-4'></span><span class='span l-5'></span><span class='span l-6'></span></div>").load('/service', function(){
+          $('#loading').hide();
+          $(this).fadeIn();
+          $('#content').scrollTop(scroll);
+        });
+      });
+    });
+    
+  
+  //about click sidenav
+  $('#si3').click(function(){
+  scroll = $('#content').scrollTop();
+  scroll = 0 - scroll;
+    $(this).addClass('on');
+    $('#si1').removeClass('on');
+    $('#si2').removeClass('on');
+    $('#si4').removeClass('on');
+      $('#content').fadeOut(function(){
+        $(this).append("<div id='loading'><span class='span'>Loading</span><span class='span l-1'></span><span class='span l-2'></span><span class='span l-3'></span><span class='span l-4'></span><span class='span l-5'></span><span class='span l-6'></span></div>").load('/service', function(){
+          $('#loading').hide();
+          $(this).fadeIn();
+          $('#content').scrollTop(scroll);
+        });
+      });
+    }); 
+
+
+  //about click content
   $('.hb4').click(function(){
   scroll = $('#content').scrollTop();
   scroll = 0 - scroll;
     $('#si4').addClass('on');
+    $('#si1').removeClass('on');
+    $('#si2').removeClass('on');
+    $('#si3').removeClass('on');
       $('#content').fadeOut(function(){
         $(this).append("<div id='loading'><span class='span'>Loading</span><span class='span l-1'></span><span class='span l-2'></span><span class='span l-3'></span><span class='span l-4'></span><span class='span l-5'></span><span class='span l-6'></span></div>").load('/about', function(){
           $('#loading').hide();
@@ -124,6 +234,9 @@ $(function(){
   scroll = $('#content').scrollTop();
   scroll = 0 - scroll;
     $(this).addClass('on');
+    $('#si1').removeClass('on');
+    $('#si2').removeClass('on');
+    $('#si3').removeClass('on');
       $('#content').fadeOut(function(){
         $(this).append("<div id='loading'><span class='span'>Loading</span><span class='span l-1'></span><span class='span l-2'></span><span class='span l-3'></span><span class='span l-4'></span><span class='span l-5'></span><span class='span l-6'></span></div>").load('/about', function(){
           $('#loading').hide();

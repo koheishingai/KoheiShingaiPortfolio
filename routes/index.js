@@ -24,6 +24,18 @@ exports.about = function(req, res){
   res.render('about', { title: 'Express' });
 };
 
+exports.artwork = function(req, res){
+  res.render('artwork', { title: 'Express' });
+};
+
+exports.project = function(req, res){
+  res.render('project', { title: 'Express' });
+};
+
+exports.service = function(req, res){
+  res.render('service', { title: 'Express' });
+};
+
 exports.ni = function(req, res){
   res.render('ni', { title: 'Express' });
 };

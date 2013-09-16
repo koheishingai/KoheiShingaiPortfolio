@@ -28,6 +28,11 @@ app.get('/ie', routes.ie);
 app.get('/phone', routes.phone);
 app.get('/tablet', routes.tab);
 app.get('/about', routes.about);
+
+app.get('/artwork', routes.artwork);
+
+app.get('/project', routes.project);
+app.get('/service', routes.service);
 app.get('/users', user.list);
 app.get('/ni', routes.ni);
 
