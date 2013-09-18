@@ -90,6 +90,7 @@ font-size: 17px;
 
 
 
+
 .slidemenu li:first-child {
     border-top: none;
 }
@@ -148,7 +149,8 @@ display: none;
   position: relative;
 }
 .slidemenu .slidemenu-body .slidemenu-content {
-  position: relative;
+position: relative;
+margin-top: -7px;
 }
 .slidemenu-left {
     left: 0;
