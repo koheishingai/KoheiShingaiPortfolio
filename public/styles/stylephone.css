@@ -28,13 +28,15 @@ color:#515151;
 display:block !important;
 }
   
-  
+
 
 nav ul {
     list-style:none;
 }
 
 /*header*/
+
+  
 #header {
 background: #fff;
 height: 44px;
@@ -42,6 +44,17 @@ position: relative;
 width: 100%;
 text-align: right;
 }
+  
+#footer {
+background: #fff;
+height: 44px;
+position: relative;
+width: 100%;
+text-align: right;
+}
+  
+  
+  
 
 .button {
 width: 44px;
@@ -160,6 +173,8 @@ margin-top: 2px;
 }
 
 
+  
+  
   
 #logo {
   font-size: 17px;
