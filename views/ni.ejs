@@ -188,9 +188,9 @@ $(function(){
     $('#si4').removeClass('on');
       $('#content').fadeOut(function(){
         $(this).append("<div id='loading'><span class='span'>Loading</span><span class='span l-1'></span><span class='span l-2'></span><span class='span l-3'></span><span class='span l-4'></span><span class='span l-5'></span><span class='span l-6'></span></div>").load('/service', function(){
-          $('#loading').hide();
-          $(this).fadeIn();
-          $('#content').scrollTop(scroll);
+            $('#loading').hide();
+            $(this).fadeIn();
+            $('#content').scrollTop(scroll);
         });
       });
     });
