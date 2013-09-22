@@ -331,7 +331,6 @@ font-weight: bold;
 text-decoration: none; 
 color: rgba(32, 142, 194, 1); 
 border: none; 
-background: lightgrey url(http://dribbble.com/images/glass-30.png) repeat-x 0 50%; 
 -webkit-border-radius: 0px; 
 -moz-border-radius: 6px; 
 border-radius: 6px; 
@@ -377,15 +376,17 @@ height: 51px;
 width: 51px; 
 } 
   
-.go img { 
-display: block; 
-position: absolute; 
-right: 0; 
-bottom: 0; 
-border-top: 3px solid #fcd04b; 
-border-left: 3px solid #fcd04b; 
-z-index: 2; 
-} 
+.go img {
+display: block;
+position: absolute;
+right: 0;
+bottom: 0;
+border-top: 3px solid #fcd04b;
+border-left: 3px solid #fcd04b;
+z-index: 2;
+width: 50px;
+height: 50px;
+}
   
 .frshb{ 
 -webkit-box-shadow: 0 2px 7px rgba(0, 0, 0, 0.4) !important; 
