@@ -7,10 +7,12 @@ $('.hb1').mouseleave(function(){
   $('.hb1').css('box-shadow', 'none');    
 });
 $('.hb2').mouseover(function(){
-  $('.hb2').css('box-shadow', 'inset 1px 1px 50px rgba(117, 117, 117, 0.31)');    
+  //$('.hb2').css('box-shadow', 'inset 1px 1px 50px rgba(117, 117, 117, 0.31)'); 
+  $('.dvr2').css('opacity', '1');    
 });
 $('.hb2').mouseleave(function(){
-  $('.hb2').css('box-shadow', 'none');    
+  //$('.hb2').css('box-shadow', 'none');  
+  $('.dvr2').css('opacity', '0');    
 });  
 $('.hb3').mouseover(function(){
   $('.hb3').css('box-shadow', 'inset 1px 1px 50px rgba(117, 117, 117, 0.31)');    
@@ -39,37 +41,49 @@ $('.hb6').mouseleave(function(){
 });
 </script>
 <h1>Service</h1>  
-<section class="home-box hb1" style="display: block;">
+<section class="home-box2 hb1" style="display: block;">
 <h3>Simple CSS</h3>
 <ul>
 <li>Simple CSS</li>
 </ul>
 </section>
-<section class="home-box hb2" style="display: block;">
-<h3>Associative Array for TOEIC</h3>
-<ul>
-<li>Associative Array for TOEIC</li>
+<section class="home-box2 hb2" style="display: block;">
+<div class="dimg">
+<div class="dimgin">	
+<img alt="AAT" src="./images/aatlogo.png">
+</div>
+<a class="dover dvr2">
+<strong>Asossiative Array for TOEIC</strong>
+<span class="comment">A tribute to the '90s.
+http://bit.ly/1acWeHv</span>
+<em class="timestamp">September 21, 2013</em>
+</a>
+</div>
+<ul class="tools group" style="visibility: visible;">
+<li class="views" style="background-position-y: 4px;background-position-x: -70px;"></li>
+<li class="cmnt" style="background-position-y: 4px;background-position-x: -31px;"></li>
+<li class="views" style="background-position-y: 4px; background-position-x: 6px;"></li>
 </ul>
 </section>
-<section class="home-box hb3" style="display: block;">
+<section class="home-box2 hb3" style="display: block;">
 <h3>Smooth Ajax</h3>
 <ul>
 <li>Smooth Ajax</li>
 </ul>
 </section>
-<section class="home-box hb4" style="display: block;">
+<section class="home-box2 hb4" style="display: block;">
 <h3>Simple Cross Device</h3>
 <ul>
 <li>Simple Cross Device</li>
 </ul>
 </section>
-<section class="home-box hb5" style="display: block;">
+<section class="home-box2 hb5" style="display: block;">
 <h3>Protfolio</h3>
 <ul>
 <li>Protfolio</li>
 </ul>
 </section>
-<section class="home-box hb6" style="display: block;">
+<section class="home-box2 hb6" style="display: block;">
 <h3>Code Bar</h3>
 <ul>
 <li>Code Bar</li>

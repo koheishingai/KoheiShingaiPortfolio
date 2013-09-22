@@ -64,10 +64,13 @@ $(function(){
   $('#msk').click(function(){
     if(mskflg != 1){
     $('#msk').css('display','none');
-  }
+    }
     mskflg = 0;
     admskflg = 0;
   });  
+  $('#modal').click(function(){
+    mskflg = 1;
+  });
   
   //menu mouseover
   $('.hb1').mouseover(function(){
@@ -103,7 +106,7 @@ $(function(){
     $('.hb4 #frames').removeClass('frshb');
   });
 
-      //about click content
+  //about click content
   var scroll = 0;
   $('.hb1').click(function(){
   scroll = $('#content').scrollTop();
