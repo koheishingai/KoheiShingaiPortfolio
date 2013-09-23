@@ -1,6 +1,9 @@
 <link href='./styles/style.css' rel='stylesheet'>
 <script async>  
 $(function(){
+
+  //codemirror
+  var editor = CodeMirror.fromTextArea(document.getElementById("code"));
   
   //socket section
   var socket = io.connect(':8080');
@@ -48,6 +51,12 @@ $(function(){
   
   //contact me execute
   $('#cbox').click(function(){
+    //show textarea
+    $('#cmfm').css('opacity', '1');
+    //codemirror
+    $('#cmfm .CodeMirror.cm-s-default').remove();
+    var editor = CodeMirror.fromTextArea(document.getElementById("code"));
+    
     $('#msk').css('display','block');
     $('#modal').css('top', afht/2-145).css('left', afwi/2-210);
   });
@@ -70,6 +79,15 @@ $(function(){
   });  
   $('#modal').click(function(){
     mskflg = 1;
+  });
+  
+  //contact me send click
+  $('#cmbt').click(function(){
+    $('#cmfm').css('opacity', '0');
+    jQuery.each($('#cmfm .CodeMirror pre'), function() {
+      $(this).text($(this).text()+'¥n');
+    });
+    alert($('#cmfm .CodeMirror pre').text());
   });
   
   //menu mouseover
@@ -349,7 +367,9 @@ $(function(){
 <div id='mdhd' class='in'>
 <h3 class='in'>Contact Me</h3>
 </div>
-<div id='cmfm' class='in'></div>
+<div id='cmfm' class='in'>
+<textarea id='code'></textarea>
+</div>
 <div id='wcmbt' class='in'>
 <div id='cmbt' class='in'>Send</div>
 </div>
