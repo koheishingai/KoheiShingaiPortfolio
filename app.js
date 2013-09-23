@@ -34,6 +34,7 @@ app.get('/artwork', routes.artwork);
 app.get('/project', routes.project);
 app.get('/service', routes.service);
 app.get('/users', user.list);
+app.get('/store', routes.store);
 app.get('/ni', routes.ni);
 
 http.createServer(app).listen(app.get('port'), function(){

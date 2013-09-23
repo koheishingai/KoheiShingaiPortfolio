@@ -40,6 +40,9 @@ exports.ni = function(req, res){
   res.render('ni', { title: 'Express' });
 };
 
+exports.store = function(req, res){
+  res.render('store', { title: 'Express' });
+};
 
 io.sockets.on('connection', function (socket) {
 socket.emit('examples', 'aaa');
