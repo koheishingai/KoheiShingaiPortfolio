@@ -1,5 +1,6 @@
 <link href='./styles/style.css' rel='stylesheet'>
 <link href='./styles/codemirror.css' rel='stylesheet' type='text/css'>
+<link href='./styles/animate.min.css' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="./scripts/codemirror.js" async></script>
 <script async>  
 $(function(){
@@ -22,14 +23,29 @@ $(function(){
 
   //init loading show
   $('#loading').show();
-
+  var ignitanim;
   //init loading function
   $('#im1, #im2, #im3, #im4, #im5, #im6, #im7, #im8, #im9').ready(function(){
     $('#loading').hide();  
     $('#head').fadeIn();
     $('#sidenav').fadeIn();
     $('#content').fadeIn();
+    ignitanim = requestAnimationFrame(repeatigan);
   });
+  function repeatigan() {
+  if($('#content').css('opacity') != '1'){
+  ignitanim = requestAnimationFrame(repeatigan);
+  }else{
+  cancelAnimationFrame(ignitanim);
+  $('.hb1 #frames').addClass('animated bounce');
+  $('.hb2 #frames').addClass('animated swing');
+  $('.hb3 #frames').addClass('animated shake');
+  $('.hb4 #frames').addClass('animated tada');
+  
+  
+
+  }
+}
   var admskflg = 0;
   //contact me draggable
   $("#modal").draggable({
