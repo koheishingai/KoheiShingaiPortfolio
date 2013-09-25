@@ -73,12 +73,12 @@ margin-top: -22px;
 }
 
 #footer {
-  background: none;
-  height: 44px;
-  position: relative;
-  width: 100%;
-  text-align: right;
-  border: 3px solid rgb(252, 208, 75);
+background: rgb(252, 208, 75);
+height: 44px;
+position: relative;
+width: 100%;
+text-align: right;
+border: 3px solid rgb(252, 208, 75);
 }
 
 .button {
