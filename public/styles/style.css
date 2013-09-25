@@ -11,6 +11,7 @@ font-family: 'Oxygen', Helvetica, Arial, sans-serif;
 color: #89867e; 
 background-color: #fcd04b; 
 display: block; 
+-webkit-transition: background 0.5s linear 0s;
 } 
 ol,ul{ 
 list-style:none; 
@@ -25,6 +26,7 @@ z-index: 985;
 border-color: #ccc; 
 background-color: #0e83cd; 
 background-size: 13px, 29px, 37px, 53px; 
+-webkit-transition: -webkit-transform 0.5s ease 0s;
 } 
 #head .left { 
 height: 100%; 
@@ -32,6 +34,7 @@ width: 240px;
 position: absolute; 
 background: #fff; 
 overflow: hidden; 
+-webkit-transition: -webkit-transform 0.5s ease 0s;
 } 
     
 #head .right { 
@@ -49,6 +52,7 @@ position: absolute;
 z-index: 700; 
 margin-top: 101px; 
 background-color: #f06060; 
+-webkit-transition: -webkit-transform 0.5s ease 0s;
 } 
   
   

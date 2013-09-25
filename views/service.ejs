@@ -14,7 +14,15 @@ $('.hb2').mouseleave(function(){
 });
 $('.hb2').click(function(){
   
-window.open('/store');
+  //window.open('/store');
+  var contentw = 0 - $('#content').innerWidth();
+  contentw = contentw - 241;
+  $('#head').css('-webkit-transform', 'translateY(-100px)');
+  $('#sidenav').css('-webkit-transform', 'translateX(-240px)');
+  $('#head .left').css('-webkit-transform', 'translateX(-240px)');
+  $('#content').css('-webkit-transform', 'translateX('+contentw+'px)');
+  $('body').css('background','#e5e5e5');
+  
 
 });  
 $('.hb3').mouseover(function(){
