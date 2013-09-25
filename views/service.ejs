@@ -33,6 +33,9 @@ function repeatOften() {
   }else{
   cancelAnimationFrame(globalID);
   $('body').css('background','#e5e5e5');
+  $('#head').css('-webkit-transform', 'translateY(0px)');
+  $('#sidenav').css('-webkit-transform', 'translateX(0px)');
+  $('#head .left').css('-webkit-transform', 'translateX(0px)');
   }
 }
 
