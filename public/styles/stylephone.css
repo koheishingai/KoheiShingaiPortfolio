@@ -45,24 +45,25 @@ nav ul {
 }
 
 #content h1 {
-  font-size: 35px;
-  margin: 0;
-  color: #FFAE03;
-  cursor: default;
+font-size: 35px;
+margin: 2px auto -7px;
+color: #FFAE03;
+cursor: default;
 }
 
 #frames {
-  width: 235px;
-  height: 235px;
-  overflow: hidden;
-  position: relative;
-  background: #fcad26;
-  border-radius: 14px;
-  box-shadow: 0 1px 4px rgba(0,0,0,.2), inset 0 1px 2px #FAF192, inset 0 -1px 1px #C5C5C5;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 11px;
+width: 235px;
+height: 235px;
+overflow: hidden;
+position: relative;
+background: #fcad26;
+border-radius: 14px;
+box-shadow: 0 1px 4px rgba(0,0,0,.2), inset 0 1px 2px #FAF192, inset 0 -1px 1px #C5C5C5;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+margin-top: 11px;
+margin-bottom: 23px;
 }
 
 #subs {
@@ -161,6 +162,12 @@ border: 3px solid rgb(252, 208, 75);
 
 #contents p {
   margin-top: 15px;
+}
+
+.hrs {
+height: 3px;
+border-top: 3px dashed rgba(255, 174, 3, 0.4);
+margin: 21px auto;
 }
 
 /*plugin*/
