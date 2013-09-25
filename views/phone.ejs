@@ -4,6 +4,7 @@
 <title>www.koheishingai.com</title>
 <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 <link rel='stylesheet' href='./styles/stylephone.css'>
+<link href='./styles/animate.min.css' rel='stylesheet' type='text/css'>
 <script src='http://code.jquery.com/jquery-1.10.2.min.js' async></script>
 <script async>
 $(function(){
@@ -16,14 +17,26 @@ $(function(){
   $('#loading').show();
   
   //init loading function
+  var ignitanim;
   $('.menu-button-left, body').ready(function(){
     $('#loading').hide();  
     $('body').fadeIn();
     $('#main').fadeIn(function(){
       $('.slidemenu').show();  
+      ignitanim = requestAnimationFrame(repeatigan);
     });
-    
   });
+function repeatigan() {
+  if($('#main').css('opacity') != '1'){
+  ignitanim = requestAnimationFrame(repeatigan);
+  }else{
+  cancelAnimationFrame(ignitanim);
+  $('#im2').addClass('animated bounce');
+  $('#im4').addClass('animated swing');
+  $('#im6').addClass('animated shake');
+  $('#im8').addClass('animated tada');
+  }
+}
   
   //init header adjust
   var afwi = window.innerWidth;
